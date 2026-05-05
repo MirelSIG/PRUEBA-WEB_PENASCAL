@@ -5,7 +5,7 @@ Prototipo de Sitio web como propuesta de Peñascal F5 para aplicación innovador
 Perfiles Ciudadanos Dinámicos para la Asignación Inteligente de Ayudas y Oportunidades desde Salas Situacionales de País Vasco
 Mediante modelos de IA ética y transparente, las salas situacionales pueden construir perfiles ciudadanos dinámicos que integren información socioeconómica, laboral, formativa y territorial para apoyar decisiones públicas más precisas, equitativas y rápidas.
 Estos perfiles no son “clasificaciones” rígidas, sino representaciones vivas que se actualizan con datos administrativos, indicadores de vulnerabilidad, trayectorias laborales, necesidades habitacionales, capacidades emprendedoras y factores territoriales (ruralidad, movilidad, acceso a servicios, etc.).
-2. Entidad Estadal responsable
+2.2  Entidad Estadal responsable
 Con esta base de datos alimentada por formulario web, la Entidad responsable podrá usar IA para:
 1. Detectar patrones de necesidad antes de que se conviertan en emergencias sociales.
 2. Priorizar apoyos (ayudas sociales, créditos habitacionales, microcréditos de emprendimiento, formación, empleo) según criterios objetivos y transparentes.
