@@ -3,40 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/style.css">
     <title>EukalTendencIAs</title>
 </head>
 <body>
-    <header>
-        <h1>EukalTendencIAs</h1>
-        <nav>
-            <ul>
-                <li><a href="/Inicio.html">Inicio</a></li>
-                <li><a href="/formulario.html">Datos</a></li>
-            </ul>
-        </nav>
-        <div class="video-container">
-        <iframe class="izquierda" src="https://www.youtube.com/watch?v=R8K96tdzvWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe class="derecha" src="https://www.youtube.com/watch?v=2-7AK8r1Vmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">EukalTendencIAs</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navbar-menu" id="navbarMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="formulario.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
-            <h2>Bienvenidos a EukalTendencIAs</h2>
-            <p>En EukalTendencIAs, nos dedicamos a explorar las últimas tendencias en inteligencia artificial y su impacto en la sociedad. Nuestro objetivo es proporcionar información actualizada y relevante sobre el mundo de la IA, desde avances tecnológicos hasta aplicaciones prácticas en diversos campos.</p>
+            <h1>Bienvenidos a EukalTendencIAs</h1>
+            <p>En EukalTendencIAs, nos dedicamos a explorar las últimas tendencias en inteligencia artificial y su impacto en la sociedad. 
+                Nuestro objetivo pasar de políticas reactivas a políticas anticipatorias, donde la IA actúa como un sistema de alerta temprana 
+                y como un asistente para la toma de decisiones complejas, siempre bajo supervisión humana y con criterios de equidad, transparencia 
+                y protección de datos. Somos un observatorio encargado además de proporcionar información actualizada y relevante sobre el mundo de la IA, 
+                desde avances tecnológicos hasta aplicaciones prácticas en diversos campos.</p>
         </section>
         <section>
             <h2>Últimas Noticias</h2>
-            <ul>
-                <li><a href="https://www.ejemplo.com/noticia1">Noticia 1: Avances en IA para la salud</a></li>
-                <li><a href="https://www.ejemplo.com/noticia2">Noticia 2: IA en la industria automotriz</a></li>
-                <li><a href="https://www.ejemplo.com/noticia3">Noticia 3: Ética en la inteligencia artificial</a></li>
-            </ul>
+            <article>
+                <header>
+                    <h3>Meta lanza Omnilingual ASR, el sistema de reconocimiento de voz más inclusivo y abierto hasta la fecha</h3>
+                    <p><time datetime="2025-11-12">12 de noviembre de 2025</time></p>
+                </header>
+                <section>
+                    <h4>Descripción</h4>
+                    <p>Meta ha dado un paso significativo en su estrategia de inteligencia artificial con el lanzamiento de Omnilingual ASR, un sistema de reconocimiento automático del habla que no solo soporta más de 1.600 idiomas de forma nativa, sino que puede adaptarse a miles más sin necesidad de reentrenamiento.</p>
+                </section>
+                <section>
+                    <h4>Características principales</h4>
+                    <ul>
+                        <li>Soporta más de 1.600 idiomas nativamente</li>
+                        <li>Capacidad zero-shot para adaptarse a nuevos idiomas</li>
+                        <li>Licencia Apache 2.0 para uso libre en aplicaciones comerciales</li>
+                        <li>Modelos wav2vec 2.0, CTC-ASR y LLM-ASR disponibles</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Impacto en lenguas minorizadas</h4>
+                    <p>Omnilingual ASR ha sido entrenado con más de 4,3 millones de horas de audio en 1.600 lenguas, incluyendo más de 500 que nunca habían sido cubiertas por modelos ASR. Meta trabajó con universidades y organizaciones comunitarias en regiones como África y Asia para construir un sistema diverso e inclusivo.</p>
+                </section>
+                <section>
+                    <h4>Disponibilidad</h4>
+                    <p>El sistema está disponible desde el 10 de noviembre en GitHub, Hugging Face y el sitio de Meta bajo licencia Apache 2.0, junto con un corpus masivo de voz con más de 350 idiomas previamente poco representados.</p>
+                </section>
+                <footer>
+                    <p><a href="https://wwwhatsnew.com/2025/11/12/meta-lanza-omnilingual-asr-el-sistema-de-reconocimiento-de-voz-mas-inclusivo-y-abierto-hasta-la-fecha/">Leer artículo completo</a></p>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h3>La Revolución de la Inteligencia Artificial en 2025: Un Futuro Transformador</h3>
+                    <p><time datetime="2025-01-01">2025</time></p>
+                </header>
+                <section>
+                    <h4>Descripción</h4>
+                    <p>La inteligencia artificial (IA) se encuentra en la capacidad de cambiar de manera significativa nuestro mundo para 2025. Frente a esta transformación se hallan los progresos en los modelos de lenguaje grandes (LLMs) y la robótica, promoviendo un nuevo paradigma en áreas como el trabajo, la normativa tecnológica y las actividades de negocios.</p>
+                </section>
+                <section>
+                    <h4>Ejes principales de transformación</h4>
+                    <ul>
+                        <li><strong>La Nueva Fuerza Laboral Híbrida:</strong> Equipos mixtos donde humanos e IA trabajan en colaboración, con roles supervisores y de gestión de recursos adaptados.</li>
+                        <li><strong>El Auge de la IA Experta:</strong> Sistemas especializados con capacidades de doctorado, utilizando técnicas como RAG (Generación Aumentada por Recuperación) y afinamiento de modelos.</li>
+                        <li><strong>Regulación Localizada de la IA:</strong> Transición de normativa mundial a regulación local, enfocada en seguridad, cumplimiento y aspectos éticos.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Beneficiarios clave</h4>
+                    <p>Sectores como medicina, finanzas, robótica y ciencias de materiales se verán especialmente beneficiados. Las empresas perfeccionarán sus operaciones, mejorando significativamente la toma de decisiones y procesos internos.</p>
+                </section>
+                <footer>
+                    <p><a href="https://www.digital-robots.com/noticias/la-revolucion-de-la-inteligencia-artificial-en-2025-un-futuro-transformador">Leer artículo completo</a></p>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h3>El centro de investigación de la Universidad del País Vasco presenta nuevos modelos de síntesis de voz en euskera</h3>
+                </header>
+                <p><a href="https://www.ehu.eus/es/web/campusa/-/hitz-zentroak-ahotsa-euskaraz-ezagutu-eta-sintetizatzeko-eredu-ireki-berriak-argitaratu-ditu">Leer más</a></p>
+            </article>
+            <article>
+                <header>
+                    <h3>Avances en reconocimiento de voz automatizado</h3>
+                </header>
+                <p><a href="https://msmk.university/automated-speech-recognition/">Leer más</a></p>
+            </article>
         </section>
-    </main>     
+    </main>    
+    <section class="video-section">
+        <div class="video-container">
+            <iframe class="video-item" src="https://www.youtube.com/embed/R8K96tdzvWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="video-item" src="https://www.youtube.com/embed/2-7AK8r1Vmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section> 
     <footer>
-        <p>&copy; 2023 EukalTendencIAs. All rights reserved.</p>
+        <p>© 2026 EukalTendencIAs. All rights reserved.</p>
     </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navbarMenu = document.getElementById('navbarMenu');
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', hamburger.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+    });
+    document.querySelectorAll('.navbar-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>

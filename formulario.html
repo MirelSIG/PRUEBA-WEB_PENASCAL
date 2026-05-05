@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de datos — Peñascal F5</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body>    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">EukalTendencIAs</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navbar-menu" id="navbarMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="formulario.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page">
+        <header class="site-header">
+            <h1>Registro ciudadano — Perfil dinámico</h1>
+            <p class="lead">Formulario para recogida de datos con consentimiento explícito según LOPD-GDD.</p>
+        </header>
+
+        <form class="card form-grid" action="index.html" method="get" autocomplete="on" accept-charset="utf-8" aria-labelledby="form-title">
+            <h2 id="form-title">Datos personales y consentimiento</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellidos" required maxlength="100" data-purpose="perfil-ciudadano" data-legal-basis="consentimiento" aria-required="true">
+
+            <label for="dni">NIF/NIE / Identificador</label>
+            <input id="dni" name="dni" type="text" placeholder="12345678A" pattern="[0-9A-Za-z\-]{6,15}" required data-purpose="identificador" title="Introduce tu NIF/NIE o identificador" aria-describedby="dni-help">
+            <small id="dni-help" class="help">Usado para vincular datos administrativos con firma digital.</small>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" required data-purpose="contacto">
+
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+34 600 000 000" pattern="\+?[0-9\s-]{6,20}" data-purpose="contacto" >
+
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input id="nacimiento" name="fecha_nacimiento" type="date" required data-purpose="demografia">
+
+            <label>Género</label>
+            <div class="radios" role="radiogroup" aria-labelledby="gender-group">
+                <label><input type="radio" name="genero" value="m" required> Masculino</label>
+                <label><input type="radio" name="genero" value="f"> Femenino</label>
+                <label><input type="radio" name="genero" value="o"> Otro / Prefiero no decir</label>
+            </div>
+
+            <label for="municipio">Municipio / Territorio</label>
+            <input id="municipio" name="municipio" type="text" placeholder="Ej. Vitoria-Gasteiz" data-purpose="territorial">
+
+            <label for="postal">Código postal</label>
+            <input id="postal" name="codigo_postal" type="text" pattern="[0-9]{5}" maxlength="5" placeholder="01001" data-purpose="territorial">
+
+            <label for="empleo">Situación laboral</label>
+            <select id="empleo" name="situacion_laboral" data-purpose="socioeconomico">
+                <option value="">-- Seleccionar --</option>
+                <option value="empleado">Empleado/a</option>
+                <option value="desempleado">Desempleado/a</option>
+                <option value="autonomo">Autónomo/a</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="jubilado">Jubilado/a</option>
+            </select>
+
+            <label for="ingresos">Ingresos netos mensuales (€)</label>
+            <input id="ingresos" name="ingresos" type="number" min="0" step="0.01" placeholder="0.00" data-purpose="socioeconomico">
+
+            <label for="estudios">Nivel de estudios</label>
+            <select id="estudios" name="estudios" data-purpose="formacion">
+                <option value="">-- Seleccionar --</option>
+                <option value="sin">Sin estudios</option>
+                <option value="primaria">Primaria</option>
+                <option value="secundaria">Secundaria</option>
+                <option value="grado">Grado / FP</option>
+                <option value="universitario">Universitario</option>
+            </select>
+
+            <label for="habilidades">Habilidades / áreas</label>
+            <input id="habilidades" name="habilidades" type="text" placeholder="p. ej. digital, agricultura, hostelería" data-purpose="perfil-profesional">
+
+            <label for="web">Sitio web / portfolio</label>
+            <input id="web" name="web" type="url" placeholder="https://" data-purpose="perfil-profesional">
+
+            <label for="perfil_desc">Descripción breve del perfil</label>
+            <textarea id="perfil_desc" name="perfil_descripcion" rows="4" maxlength="800" placeholder="Describe tus circunstancias, necesidades o habilidades" data-purpose="contextual"></textarea>
+
+            <label for="firma">Firma digital / consentimiento (subir certificado o pdf)</label>
+            <input id="firma" name="firma_digital" type="file" accept="application/pdf,application/pkcs7-mime,.p7m" data-purpose="consentimiento" aria-describedby="firma-help">
+            <small id="firma-help" class="help">Sube documento que acredite tu consentimiento firmado digitalmente (LOPD-GDD).</small>
+
+            <label class="privacy">
+                <input type="checkbox" name="acepta_privacidad" required aria-required="true" data-purpose="consentimiento">
+                He leído y acepto la política de privacidad y el tratamiento de mis datos por la Entidad responsable según LOPD-GDD.
+            </label>
+
+            <label>Preferencia de contacto</label>
+            <div class="radios">
+                <label><input type="radio" name="contacto_pref" value="email" checked> Email</label>
+                <label><input type="radio" name="contacto_pref" value="telefono"> Teléfono</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn primary">Enviar (GET)</button>
+                <button type="reset" class="btn ghost">Limpiar</button>
+            </div>
+        </form>
+
+        <footer class="site-footer">
+            <small>Entidad responsable: Entidad Estadal — Uso de datos: elaboración de perfiles dinámicos para priorización de ayudas y simulación de escenarios.</small>
+            <p class="source">Fuente del modelo y páginas oficiales del Estado: <a href="Modelo_Literario.md">Modelo_Literario.md</a></p>
+        </footer>
+    </main>
 </body>
 </html>

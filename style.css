@@ -1,0 +1,200 @@
+:root{
+	--bg: #f4fbfb;
+	--card: #ffffff;
+	--primary: #2aa198;
+	--accent: #ff6b6b;
+	--muted: #6b7280;
+	--focus: #1f6f64;
+	--radius: 10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg, var(--bg), #eef7f6 60%);
+	color:#0f1724;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Navbar articulado entre las dos páginas */
+.navbar{
+	background: linear-gradient(135deg, var(--primary) 0%, var(--focus) 100%);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 4px 12px rgba(10,20,20,0.12);
+}
+
+.navbar-container{
+	max-width:1100px;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:12px 16px;
+}
+
+.navbar-brand{
+	font-family: 'Merriweather', serif;
+	font-size:1.4rem;
+	font-weight:700;
+	color:white;
+	text-decoration:none;
+	letter-spacing:-0.5px;
+}
+
+.hamburger{
+	display:none;
+	flex-direction:column;
+	background:transparent;
+	border:none;
+	cursor:pointer;
+	gap:5px;
+	padding:8px;
+}
+
+.hamburger span{
+	width:24px;
+	height:3px;
+	background:white;
+	border-radius:2px;
+	transition:all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+	transform:rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2){
+	opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+	transform:rotate(-45deg) translate(8px, -8px);
+}
+
+.navbar-menu{
+	display:flex;
+}
+
+.navbar-menu ul{
+	display:flex;
+	list-style:none;
+	margin:0;
+	padding:0;
+	gap:0;
+}
+
+.navbar-menu a{
+	color:white;
+	text-decoration:none;
+	padding:12px 16px;
+	display:block;
+	font-weight:500;
+	transition:background 0.2s ease;
+	border-bottom:3px solid transparent;
+}
+
+.navbar-menu a:hover{
+	background:rgba(255,255,255,0.1);
+	border-bottom-color:var(--accent);
+}
+
+/* Videos */
+.video-section{
+	background: linear-gradient(135deg, rgba(42,161,152,0.05) 0%, rgba(31,111,100,0.05) 100%);
+	padding:20px 16px;
+}
+
+.video-container{
+	max-width:1100px;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:16px;
+}
+
+.video-item{
+	width:100%;
+	height:300px;
+	border-radius:8px;
+	box-shadow:0 4px 12px rgba(10,20,20,0.1);
+}
+
+.page{max-width:1100px;margin:32px auto;padding:16px}
+.site-header{margin-bottom:18px;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><linearGradient id="grad1"><stop offset="0%25" style="stop-color:%23f4fbfb;stop-opacity:1" /><stop offset="100%25" style="stop-color:%23eef7f6;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="300" fill="url(%23grad1)"/><circle cx="10%25" cy="20%25" r="80" fill="%232aa198" opacity="0.08"/><circle cx="85%25" cy="80%25" r="120" fill="%232aa198" opacity="0.06"/></svg>');background-size:cover;padding:20px;border-radius:12px}
+.site-header h1{font-family: 'Merriweather', serif;font-size:1.9rem;margin:0;color:var(--primary)}
+.lead{font-family: 'Inter', sans-serif;color:var(--muted);margin-top:6px}
+
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 20px rgba(10,20,20,0.06);padding:20px;background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="%232aa198" opacity="0.03"/><circle cx="50" cy="50" r="1" fill="%232aa198" opacity="0.03"/></svg>');background-size:100px 100px}
+
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:start}
+.form-grid h2{grid-column:1/-1;margin:0 0 6px 0;font-family:'Montserrat',sans-serif}
+
+label{display:block;font-weight:600;font-family:'Montserrat',sans-serif;color:var(--muted);font-size:0.9rem}
+input[type="text"],input[type="email"],input[type="tel"],input[type="date"],input[type="number"],input[type="url"],input[type="datetime-local"],select,textarea,input[type="color"],input[type="file"]{
+	width:100%;padding:10px 12px;border:1px solid #e6eef0;border-radius:8px;font-size:0.95rem;margin-top:6px;margin-bottom:6px;background:transparent
+}
+
+textarea{resize:vertical}
+.radios,label.privacy{display:flex;gap:12px;align-items:center}
+.radios label, .privacy{font-weight:400;font-family:'Inter',sans-serif;color:#0f1724}
+.help{color:var(--muted);font-size:0.8rem}
+
+.form-actions{grid-column:1/-1;display:flex;gap:12px;justify-content:flex-end;margin-top:10px}
+.btn{padding:10px 16px;border-radius:8px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:all 0.2s ease}
+.btn.primary{background:var(--primary);color:white}
+.btn.primary:hover{background:var(--focus);transform:translateY(-1px);box-shadow:0 4px 12px rgba(42,161,152,0.25)}
+.btn.ghost{background:transparent;border-color:#d6e7e5;color:var(--focus)}
+.btn.ghost:hover{background:rgba(42,161,152,0.05)}
+.btn:focus{outline:3px solid rgba(42,161,152,0.18)}
+
+.site-footer{margin-top:14px;color:var(--muted);font-size:0.85rem;text-align:center}
+
+input:focus,select:focus,textarea:focus{border-color:var(--focus);box-shadow:0 4px 14px rgba(31,111,100,0.08)}
+input[type=range]{accent-color:var(--primary)}
+
+/* Responsive Tablet */
+@media (max-width: 748px){
+	.form-grid{grid-template-columns:repeat(2,1fr)}
+	.page{padding:12px;margin:18px auto}
+	.site-header h1{font-size:1.6rem}
+	
+	.hamburger{display:flex}
+	.navbar-menu{
+		position:absolute;
+		top:100%;
+		left:0;
+		right:0;
+		background:linear-gradient(135deg, var(--primary) 0%, var(--focus) 100%);
+		max-height:0;
+		overflow:hidden;
+		transition:max-height 0.3s ease;
+	}
+	
+	.navbar-menu.active{max-height:200px}
+	.navbar-menu ul{flex-direction:column;width:100%}
+	.navbar-menu a{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.1)}
+	
+	.video-container{grid-template-columns:1fr}
+	.video-item{height:250px}
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px){
+	.form-grid{grid-template-columns:1fr}
+	.form-actions{justify-content:stretch;flex-direction:column}
+	.btn{width:100%}
+	.site-header h1{font-size:1.3rem}
+	label{font-size:0.88rem}
+	.page{padding:8px;margin:12px auto}
+	
+	.navbar-brand{font-size:1.1rem}
+	.navbar-menu.active{max-height:150px}
+	
+	.video-section{padding:12px 8px}
+	.video-container{gap:12px}
+	.video-item{height:200px}
+}
+
