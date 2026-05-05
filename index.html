@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>EukalTendencIAs</title>
 </head>
 <body>
     <header class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">EukalTendencIAs</a>
-            <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+            <a href="formulario.html" class="hamburger" aria-label="Formulario">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </a>
             <nav class="navbar-menu" id="navbarMenu">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -23,18 +23,25 @@
             </nav>
         </div>
     </header>
-    <main>
-        <section>
-            <h1>Bienvenidos a EukalTendencIAs</h1>
-            <p>En EukalTendencIAs, nos dedicamos a explorar las últimas tendencias en inteligencia artificial y su impacto en la sociedad. 
-                Nuestro objetivo pasar de políticas reactivas a políticas anticipatorias, donde la IA actúa como un sistema de alerta temprana 
-                y como un asistente para la toma de decisiones complejas, siempre bajo supervisión humana y con criterios de equidad, transparencia 
-                y protección de datos. Somos un observatorio encargado además de proporcionar información actualizada y relevante sobre el mundo de la IA, 
-                desde avances tecnológicos hasta aplicaciones prácticas en diversos campos.</p>
+    <main class="page-content">
+        <section class="hero card">
+            <div class="hero-content">
+                <p class="eyebrow">Observatorio de IA y transformación pública</p>
+                <h1>Bienvenidos a EukalTendencIAs</h1>
+                <p>En EukalTendencIAs, nos dedicamos a explorar las últimas tendencias en inteligencia artificial y su impacto en la sociedad. 
+                    Nuestro objetivo pasar de políticas reactivas a políticas anticipatorias, donde la IA actúa como un sistema de alerta temprana 
+                    y como un asistente para la toma de decisiones complejas, siempre bajo supervisión humana y con criterios de equidad, transparencia 
+                    y protección de datos. Somos un observatorio encargado además de proporcionar información actualizada y relevante sobre el mundo de la IA, 
+                    desde avances tecnológicos hasta aplicaciones prácticas en diversos campos.</p>
+            </div>
         </section>
-        <section>
-            <h2>Últimas Noticias</h2>
-            <article>
+        <section class="news-section">
+            <div class="section-header">
+                <p class="eyebrow">Actualidad seleccionada</p>
+                <h2>Últimas Noticias</h2>
+            </div>
+            <div class="news-grid">
+            <article class="news-card pais-vasco-featured">
                 <header>
                     <h3>Meta lanza Omnilingual ASR, el sistema de reconocimiento de voz más inclusivo y abierto hasta la fecha</h3>
                     <p><time datetime="2025-11-12">12 de noviembre de 2025</time></p>
@@ -64,7 +71,18 @@
                     <p><a href="https://wwwhatsnew.com/2025/11/12/meta-lanza-omnilingual-asr-el-sistema-de-reconocimiento-de-voz-mas-inclusivo-y-abierto-hasta-la-fecha/">Leer artículo completo</a></p>
                 </footer>
             </article>
-            <article>
+            <article class="news-card pais-vasco-featured">
+                <header>
+                    <h3>El centro de investigación de la Universidad del País Vasco presenta nuevos modelos de síntesis de voz en euskera</h3>
+                </header>
+                <section>
+                    <p>La Universidad del País Vasco (UPV/EHU) ha presentado nuevos modelos avanzados para la síntesis de voz en euskera, un hito importante para la tecnología de habla en lenguas minorizadas.</p>
+                </section>
+                <footer>
+                    <p><a href="https://www.ehu.eus/es/web/campusa/-/hitz-zentroak-ahotsa-euskaraz-ezagutu-eta-sintetizatzeko-eredu-ireki-berriak-argitaratu-ditu">Leer artículo completo</a></p>
+                </footer>
+            </article>
+            <article class="news-card accent-card">
                 <header>
                     <h3>La Revolución de la Inteligencia Artificial en 2025: Un Futuro Transformador</h3>
                     <p><time datetime="2025-01-01">2025</time></p>
@@ -90,21 +108,34 @@
                     <p><a href="https://www.digital-robots.com/noticias/la-revolucion-de-la-inteligencia-artificial-en-2025-un-futuro-transformador">Leer artículo completo</a></p>
                 </footer>
             </article>
-            <article>
-                <header>
-                    <h3>El centro de investigación de la Universidad del País Vasco presenta nuevos modelos de síntesis de voz en euskera</h3>
-                </header>
-                <p><a href="https://www.ehu.eus/es/web/campusa/-/hitz-zentroak-ahotsa-euskaraz-ezagutu-eta-sintetizatzeko-eredu-ireki-berriak-argitaratu-ditu">Leer más</a></p>
-            </article>
-            <article>
+
+            <article class="news-card compact-card">
                 <header>
                     <h3>Avances en reconocimiento de voz automatizado</h3>
                 </header>
-                <p><a href="https://msmk.university/automated-speech-recognition/">Leer más</a></p>
+                <section>
+                    <p>Los sistemas de reconocimiento automático del habla (ASR) han alcanzado niveles sin precedentes de precisión y velocidad. Las últimas investigaciones demuestran mejoras significativas en la detección de acentos y variaciones dialectales.</p>
+                </section>
+                <section>
+                    <h4>Avances clave</h4>
+                    <ul>
+                        <li>Reducción de tasas de error hasta 5-8%</li>
+                        <li>Procesamiento en tiempo real mejorado</li>
+                        <li>Mayor precisión en entornos ruidosos</li>
+                    </ul>
+                </section>
+                <footer>
+                    <p><a href="https://msmk.university/automated-speech-recognition/">Leer más</a></p>
+                </footer>
             </article>
+            </div>
         </section>
     </main>    
-    <section class="video-section">
+    <section class="video-section card">
+        <div class="section-header">
+            <p class="eyebrow">Recursos audiovisuales</p>
+            <h2>Explora el contexto tecnológico</h2>
+        </div>
         <div class="video-container">
             <iframe class="video-item" src="https://www.youtube.com/embed/R8K96tdzvWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe class="video-item" src="https://www.youtube.com/embed/2-7AK8r1Vmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -113,21 +144,5 @@
     <footer>
         <p>© 2026 EukalTendencIAs. All rights reserved.</p>
     </footer>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navbarMenu = document.getElementById('navbarMenu');
-    hamburger.addEventListener('click', () => {
-      navbarMenu.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', hamburger.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-    });
-    document.querySelectorAll('.navbar-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
 </body>
 </html>
