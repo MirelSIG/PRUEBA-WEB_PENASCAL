@@ -3,9 +3,13 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario de datos — Peñascal F5</title>
+        <title>Formulario de datos — EuskalTendencIAs</title>
         <link rel="stylesheet" href="./CSS/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+        <title>EukalTendencIAs | Formulario de datos ciudadanos</title>
+        <meta name="description" content="Bienvenido a este sitio web. Aquí proporcionas tus datos de forma segura para ser tomado en cuenta en los planes de beneficio social basados en BigData e IA.">
+        <meta name="keywords" content="Innovación tecnológica, inteligencia artificial, proyectos, recursos, actualidad tecnológica">
+        <h1 class="visually-hidden">EukalTendencIAs</h1>
 </head>
 <body>    <header class="navbar">
         <div class="navbar-container">
@@ -28,9 +32,29 @@
             <h1>Registro ciudadano — Perfil dinámico</h1>
             <p class="lead">Formulario para recogida de datos con consentimiento explícito según LOPD-GDD.</p>
         </header>
+            <section id="uno" class="login-block" aria-labelledby="login-title">
+            <div class="registro-previo">
+                <p class="eyebrow eyebrow-dark">Registro previo</p>
+                <h3 id="login-title">Identificate antes de enviar tus datos</h3>
+            </div>
 
-        <form class="card form-grid" action="index.html" method="get" autocomplete="on" accept-charset="utf-8" aria-labelledby="form-title">
+            <label for="loginUser">Usuario</label>
+            <input type="text" id="loginUser" class="valor1" name="login_user" size="10" maxlength="10" placeholder="Nombre Usuario" required>
+
+            <label for="loginPass">Contraseña</label>
+            <input type="password" id="loginPass" class="valor1" name="login_pass" size="10" maxlength="10" placeholder="Contraseña" required>
+
+            <span class="login-actions">
+                <label for="loginAction"></label>
+                <button id="loginAction" type="button" class="btn ghost login-action">Pulsar</button>
+            </span>
+
+            <p id="loginMessage" class="login-message" role="status" aria-live="polite">Pon los datos de logueo para entrar en el portal</p>
+        </section>
+
+        <form id="registrationForm" class="card form-grid" action="index.html" method="get" autocomplete="on" accept-charset="utf-8" aria-labelledby="form-title">
             <h2 id="form-title">Datos personales y consentimiento</h2>
+            <div id="loginSectionMount"></div>
 
             <label for="nombre">Nombre completo</label>
             <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellidos" required maxlength="100" data-purpose="perfil-ciudadano" data-legal-basis="consentimiento" aria-required="true">
@@ -92,14 +116,15 @@
 
             <label for="perfil_desc">Descripción breve del perfil</label>
             <textarea id="perfil_desc" name="perfil_descripcion" rows="4" maxlength="800" placeholder="Describe tus circunstancias, necesidades o habilidades" data-purpose="contextual"></textarea>
+            <div id="contador" class="counter">0 / 800 caracteres</div>
 
             <label for="firma">Firma digital / consentimiento (subir certificado o pdf)</label>
             <input id="firma" name="firma_digital" type="file" accept="application/pdf,application/pkcs7-mime,.p7m" data-purpose="consentimiento" aria-describedby="firma-help">
             <small id="firma-help" class="help">Sube documento que acredite tu consentimiento firmado digitalmente (LOPD-GDD).</small>
 
             <label class="privacy">
-                <input type="checkbox" name="acepta_privacidad" required aria-required="true" data-purpose="consentimiento">
-                He leído y acepto la política de privacidad y el tratamiento de mis datos por la Entidad responsable según LOPD-GDD.
+                <input id="aceptaCondiciones" type="checkbox" name="acepta_privacidad" required aria-required="true" data-purpose="consentimiento">
+                He leído y acepto las condiciones generales de la web, su política de privacidad y el tratamiento de mis datos por la Entidad responsable según LOPD-GDD.
             </label>
 
             <label>Preferencia de contacto</label>
@@ -109,15 +134,19 @@
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn primary">Enviar (GET)</button>
+                <button id="btnEnviar" type="submit" class="btn primary">Enviar</button>
                 <button type="reset" class="btn ghost">Limpiar</button>
             </div>
+            <p id="message" class="form-status" role="status" aria-live="polite"></p>
         </form>
 
         <footer class="site-footer">
             <small>Entidad responsable: Entidad Estadal — Uso de datos: elaboración de perfiles dinámicos para priorización de ayudas y simulación de escenarios.</small>
-            <p class="source">Fuente del modelo y páginas oficiales del Estado: <a href="Modelo_Literario.md">Modelo_Literario.md</a></p>
+            <p class="source">Fuente del modelo: Páginas oficiales del Estado y <a href="Modelo_Literario.md">Modelo_Literario.md</a></p>
         </footer>
     </main>
+    <script src="./js/login.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/counter.js"></script>
 </body>
 </html>

@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EukalTendencIAs | Inicio</title>
+    <meta name="description" content="Bienvenido a este sitio web. Aquí encontrarás últimas tendencias en inteligencia artificial y su impacto en la sociedad.">
+    <meta name="keywords" content="Innovación tecnológica, inteligencia artificial, proyectos, recursos, actualidad tecnológica">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>EukalTendencIAs</title>
+    <h1 class="visually-hidden">EukalTendencIAs</h1>
 </head>
 <body>
+
     <header class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">EukalTendencIAs</a>
@@ -139,10 +144,15 @@
         <div class="video-container">
             <iframe class="video-item" src="https://www.youtube.com/embed/R8K96tdzvWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe class="video-item" src="https://www.youtube.com/embed/2-7AK8r1Vmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img id="imgCambio" class="video-item img-cambio" src="./assets/img4.webp" alt="imagen dinámica">
         </div>
     </section> 
-    <footer>
-        <p>© 2026 EukalTendencIAs. All rights reserved.</p>
+    <footer class="site-footer">
+        <p class="source">© 2026 EukalTendencIAs. All rights reserved. 
+        <span id="reloj"></span> <span id="fecha"></span></p>
     </footer>
+    <script src="./js/date.js"></script>
+    <script src="./js/imgChange.js"></script>
+
 </body>
 </html>
